@@ -8,24 +8,32 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import axios from "axios";
+import jsonp from "jsonp";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HelloWorld
   },
   data() {
     return {
-      age: 30,
+      age: 30
     };
   },
   mounted() {
-    let url =
-      "https://www.easy-mock.com/mock/5b012c1fe6e1035843cd3aff/mockapi/table/list";
-    axios.get(url).then((res) => {
-      console.log("res", res);
+    // cors 跨域
+    // let url =
+    //   "https://www.easy-mock.com/mock/5b012c1fe6e1035843cd3aff/mockapi/table/list";
+    // axios.get(url).then((res) => {
+    //   console.log("res", res);
+    // });
+
+    let url = "https://www.imooc.com/activity/servicetime";
+    jsonp(url, (err, res) => {
+      let result = res;
+      this.data = result;
     });
-  },
+  }
 };
 </script>
 

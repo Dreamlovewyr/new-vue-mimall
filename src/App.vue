@@ -5,13 +5,17 @@
 </template>
 
 <script>
-import axios from "axios";
-import jsonp from "jsonp";
+// import axios from "axios";
+// import jsonp from "jsonp";
 
 export default {
   name: "App",
   components: {},
-  data() {},
+  data() {
+    return {
+      
+    }
+  },
   mounted() {
     // cors 跨域
     // let url =
@@ -25,7 +29,7 @@ export default {
     //   let result = res;
     //   this.data = result;
     // });
-  }
+  },
 };
 </script>
 

@@ -7,14 +7,13 @@
 <script>
 // import axios from "axios";
 // import jsonp from "jsonp";
+// import storage from "./storage";
 
 export default {
   name: "App",
   components: {},
   data() {
-    return {
-      
-    }
+    return {};
   },
   mounted() {
     // cors 跨域
@@ -29,7 +28,13 @@ export default {
     //   let result = res;
     //   this.data = result;
     // });
-  },
+    // storage capsulation
+    // storage.setItem("a", 1);
+    // storage.setItem("user", { a: 1 });
+    // storage.setItem("abc", { a: 1 }, "user");
+    // storage.clear("a");
+    // storage.clear("a", "user");
+  }
 };
 </script>
 
